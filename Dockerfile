@@ -14,7 +14,7 @@ RUN wget https://downloads.openwrt.org/snapshots/targets/x86/64/openwrt-imagebui
 RUN tar -J -x -f openwrt-imagebuilder-*.tar.xz
 WORKDIR /home/build/openwrt-imagebuilder-x86-64.Linux-x86_64
 
-RUN sed -i 's/^\s*\(CONFIG_TARGET_KERNEL_PARTSIZE\)\s*=\s*[^#\n \t]*/\1=30/' .config
+RUN sed -i 's/^\s*\(CONFIG_TARGET_KERNEL_PARTSIZE\)\s*=\s*[^#\n \t]*/\1=20/' .config
 RUN sed -i 's/^\s*\(CONFIG_TARGET_ROOTFS_PARTSIZE\)\s*=\s*[^#\n \t]*/\1=1024/' .config
 
 CMD make FORCE=1 V=s image FILES="files" PACKAGES="collectd collectd-mod-mqtt collectd-mod-memory collectd-mod-interface \
