@@ -20,4 +20,4 @@ RUN sed -i 's/^\s*\(CONFIG_TARGET_ROOTFS_PARTSIZE\)\s*=\s*[^#\n \t]*/\1=1024/' .
 CMD make FORCE=1 V=s image FILES="files" PACKAGES="collectd collectd-mod-mqtt collectd-mod-memory collectd-mod-interface \
   collectd-mod-load collectd-mod-uptime collectd-mod-ping collectd-mod-cpu iperf3 tcpdump-mini unbound-daemon libunbound \
   unbound-control wireguard-tools luci luci-ssl luci-mod-dashboard luci-proto-wireguard luci-app-wireguard luci-app-unbound \
-  odhcp6c odhcpd-ipv6only luci-app-ddns ddns-scripts-cloudflare sqm-scripts luci-app-sqm nlbwmon luci-app-nlbwmon"
+  odhcp6c odhcpd-ipv6only luci-app-ddns ddns-scripts-cloudflare sqm-scripts luci-app-sqm nlbwmon luci-app-nlbwmon qemu-ga"
