@@ -10,8 +10,8 @@ RUN adduser -D -u 1000 -G build build
 USER build
 WORKDIR /home/build
 
-RUN wget https://downloads.openwrt.org/snapshots/targets/x86/64/openwrt-imagebuilder-x86-64.Linux-x86_64.tar.xz
-RUN tar -J -x -f openwrt-imagebuilder-*.tar.xz
+RUN wget https://downloads.openwrt.org/snapshots/targets/x86/64/openwrt-imagebuilder-x86-64.Linux-x86_64.tar.zst
+RUN tar --use-compress-program=unzstd -xvf openwrt-imagebuilder-x86-64.Linux-x86_64.tar.zst
 WORKDIR /home/build/openwrt-imagebuilder-x86-64.Linux-x86_64
 
 RUN sed -i 's/^\s*\(CONFIG_TARGET_KERNEL_PARTSIZE\)\s*=\s*[^#\n \t]*/\1=20/' .config
