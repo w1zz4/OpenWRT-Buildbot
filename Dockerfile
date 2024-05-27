@@ -3,7 +3,7 @@ FROM alpine:latest
 RUN apk update && apk upgrade
 RUN apk add alpine-sdk gawk bash bzip2 perl python3 xz sed make argp-standalone asciidoc bash bc binutils bzip2 cdrkit coreutils diffutils \
   elfutils-dev findutils flex musl-fts-dev g++ gawk gcc gettext git grep gzip intltool libxslt linux-headers make musl-libintl musl-obstack-dev \
-  ncurses-dev openssl-dev patch perl python3-dev rsync tar unzip util-linux wget zlib-dev
+  ncurses-dev openssl-dev patch perl python3-dev rsync tar unzip util-linux wget zlib-dev py3-distutils-extra
 
 RUN addgroup -g 1000 build
 RUN adduser -D -u 1000 -G build build
