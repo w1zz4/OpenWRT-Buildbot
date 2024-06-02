@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.19
 
 RUN apk update && apk upgrade
 RUN apk add alpine-sdk gawk bash bzip2 perl python3 xz sed make argp-standalone asciidoc bash bc binutils bzip2 cdrkit coreutils diffutils \
